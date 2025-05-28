@@ -3,6 +3,8 @@
  * SPDX-License-Identifier: MIT
  */
 
+// Comment
+
 'use strict'
 
 module.exports = function (grunt) {
