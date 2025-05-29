@@ -3,6 +3,8 @@
  * SPDX-License-Identifier: MIT
  */
 
+// This is update 2.
+
 'use strict'
 
 module.exports = function (grunt) {
