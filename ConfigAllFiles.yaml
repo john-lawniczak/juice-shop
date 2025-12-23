@@ -1,0 +1,13 @@
+include:
+  - lib/insecurity.ts
+  - Gruntfile.js
+exclude:
+  - "**/test/**"
+  - "**/tests/**"
+  - "**/node_modules/**"
+  - "**/*.spec.ts"
+  - "**/*.test.ts"
+
+scan_mode: DEFAULT
+project_type: OTHER
+

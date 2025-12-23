@@ -1,0 +1,10 @@
+rules:
+  - slug: js-sql-injection-raw-query
+    description: Detects SQL injection vulnerabilities from raw query construction with user input
+    instructions: Flag any sequelize.query() or similar raw SQL execution where user-supplied input (req.body, req.query, req.params) is directly concatenated or interpolated into the SQL string using template literals or string concatenation. Safe patterns use parameterized queries with bind variables or ORM methods with proper escaping. Raw queries like `SELECT * FROM Users WHERE email = '${req.body.email}'` are vulnerable to SQL injection attacks allowing authentication bypass, data exfiltration, or database manipulation.
+    severity: CRITICAL
+
+  - slug: Weak-password-hash
+    Detects use of weak cryptographic hash functions for password storage
+Flag any code that uses MD5, SHA1, or other weak/fast hash algorithms for hashing passwords or other sensitive credentials. Password hashing must use dedicated password hashing functions like bcrypt, scrypt, argon2, or PBKDF2 with appropriate cost factors. Fast hash functions are vulnerable to brute-force and rainbow table attacks, compromising user credential security.    severity: HIGH
+
